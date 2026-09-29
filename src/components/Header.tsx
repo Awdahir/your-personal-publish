@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useRouterState } from "@tanstack/react-router";
+import { pageToPath, useSiteNavigate } from "@/lib/nav";
 import type { Page } from "@/types/navigation";
-
-interface HeaderProps {
-  page: Page;
-  onNavigate: (page: Page) => void;
-}
 
 const NAV: { id: Page; label: string }[] = [
   { id: "home", label: "Home" },
@@ -17,9 +14,20 @@ const NAV: { id: Page; label: string }[] = [
   { id: "contact", label: "Contact" },
 ];
 
-export function Header({ page, onNavigate }: HeaderProps) {
+function activePage(pathname: string): Page {
+  if (pathname === "/") return "home";
+  if (pathname.startsWith("/blog")) return "blog";
+  if (pathname.startsWith("/insights")) return "insights";
+  const first = pathname.split("/")[1] as Page;
+  return NAV.some((n) => n.id === first) ? first : "home";
+}
+
+export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const onNavigate = useSiteNavigate();
+  const page = activePage(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -27,6 +35,10 @@ export function Header({ page, onNavigate }: HeaderProps) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const go = (p: Page) => {
     setOpen(false);
@@ -36,13 +48,17 @@ export function Header({ page, onNavigate }: HeaderProps) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-paper/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-[1360px] items-center justify-between px-6 md:h-20 md:px-8">
-        <button
-          onClick={() => go("home")}
+        <a
+          href={pageToPath("home")}
+          onClick={(e) => {
+            e.preventDefault();
+            go("home");
+          }}
           className="font-serif text-2xl tracking-tight md:text-[1.7rem]"
           aria-label="Awdahir home"
         >
           Awdahir<span className="text-chart">.</span>
-        </button>
+        </a>
 
         <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((item) => (

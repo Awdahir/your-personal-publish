@@ -1,11 +1,10 @@
 import { SOCIALS } from "@/data/content";
+import { useSiteNavigate } from "@/lib/nav";
 import type { Page } from "@/types/navigation";
 
-interface FooterProps {
-  onNavigate: (page: Page) => void;
-}
+export function Footer() {
+  const onNavigate = useSiteNavigate();
 
-export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-ink text-paper">
       <div className="mx-auto max-w-[1360px] px-6 py-16 md:px-8 md:py-24">
