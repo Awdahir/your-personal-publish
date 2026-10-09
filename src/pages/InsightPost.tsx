@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { PostArt } from "@/components/PostArt";
+import { ArticleChart } from "@/components/ArticleChart";
 import { INSIGHTS } from "@/data/insights";
 import { SOCIALS } from "@/data/content";
 import type { Page } from "@/types/navigation";
@@ -55,6 +56,7 @@ export function InsightPost({ slug, onNavigate }: InsightPostProps) {
             {section.paragraphs.map((p, j) => (
               <p key={j}>{p}</p>
             ))}
+            {section.chart && <ArticleChart chart={section.chart} />}
           </div>
         ))}
 

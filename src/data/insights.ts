@@ -11,7 +11,7 @@ export interface Insight {
   date: string;
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
-  body: { heading?: string; paragraphs: string[] }[];
+  body: { heading?: string; paragraphs: string[]; chart?: import("@/components/ArticleChart").ChartKey }[];
 }
 
 export const INSIGHTS: Insight[] = [
