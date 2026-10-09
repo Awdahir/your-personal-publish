@@ -1,3 +1,4 @@
+import type React from "react";
 export type ChartKey = "balance-sheet" | "wealth-share" | "asset-mix" | "debt-income";
 
 interface Seg { label: string; value: number; cls: string }
@@ -37,7 +38,7 @@ function Bars({ rows, max, unit }: { rows: { label: string; value: number; cls: 
   );
 }
 
-const CHARTS: Record<ChartKey, { title: string; source: string; body: () => JSX.Element }> = {
+const CHARTS: Record<ChartKey, { title: string; source: string; body: () => React.ReactNode }> = {
   "balance-sheet": {
     title: "U.S. consumer balance sheet, Q4 2025 (USD trillions)",
     source: "Source: Federal Reserve Z.1 Financial Accounts, via J.P. Morgan Asset Management Guide to the Markets.",
