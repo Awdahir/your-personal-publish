@@ -77,9 +77,17 @@ export function Post({ slug, onNavigate }: PostProps) {
           <section aria-labelledby="article-reading-list" className="mt-12 border-t border-ink/20 pt-4">
             <h3 id="article-reading-list">Ten books I have read on attention and digital life</h3>
             <p>These books helped shape my thinking. They offer different lenses, not ten interchangeable scientific verdicts. Read them critically, including the ones whose arguments you find most persuasive.</p>
-            <ol className="list-decimal space-y-6 pl-6 marker:font-mono marker:text-ink/50">
+            <ol className="space-y-6 pl-6 marker:font-mono marker:text-ink/50 list-decimal">
               {post.readingList.map((book) => (
                 <li key={book.title} className="pl-2">
+                  {book.cover && (
+                    <img
+                      src={book.cover.url}
+                      alt={`Cover of ${book.title}`}
+                      loading="lazy"
+                      className="img-zoom float-right ml-6 mb-3 w-32 border border-ink/20 shadow-[6px_6px_0_0_rgba(14,42,34,0.12)]"
+                    />
+                  )}
                   <div className="font-serif text-xl leading-snug">{book.title}</div>
                   <div className="mt-1 text-sm font-medium text-ink/75">{book.author}</div>
                   <div className="mt-2 text-sm leading-relaxed text-ink/65">{book.note}</div>
