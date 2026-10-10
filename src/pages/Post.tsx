@@ -57,6 +57,38 @@ export function Post({ slug, onNavigate }: PostProps) {
           </div>
         ))}
 
+        {post.sources && (
+          <section aria-labelledby="article-sources" className="mt-12 border-t border-ink/20 pt-4">
+            <h3 id="article-sources">Evidence and further context</h3>
+            <ul className="space-y-5">
+              {post.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noreferrer" className="link-underline font-medium text-ink underline underline-offset-4">
+                    {source.label} <ArrowUpRight size={13} className="inline" />
+                  </a>
+                  <div className="mt-2 text-sm leading-relaxed text-ink/65">{source.note}</div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {post.readingList && (
+          <section aria-labelledby="article-reading-list" className="mt-12 border-t border-ink/20 pt-4">
+            <h3 id="article-reading-list">Ten books I have read on attention and digital life</h3>
+            <p>These books helped shape my thinking. They offer different lenses, not ten interchangeable scientific verdicts. Read them critically, including the ones whose arguments you find most persuasive.</p>
+            <ol className="list-decimal space-y-6 pl-6 marker:font-mono marker:text-ink/50">
+              {post.readingList.map((book) => (
+                <li key={book.title} className="pl-2">
+                  <div className="font-serif text-xl leading-snug">{book.title}</div>
+                  <div className="mt-1 text-sm font-medium text-ink/75">{book.author}</div>
+                  <div className="mt-2 text-sm leading-relaxed text-ink/65">{book.note}</div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
         {/* share strip */}
         <div className="mt-16 border-y border-ink/20 py-8">
           <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-ink/50">
