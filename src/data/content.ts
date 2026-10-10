@@ -1,3 +1,5 @@
+import anxiousGenerationCover from "@/assets/anxious-generation-cover.jpg.asset.json";
+
 export interface Post {
   slug: string;
   title: string;
