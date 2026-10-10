@@ -8,7 +8,7 @@ export interface Post {
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
   body: { heading?: string; paragraphs: string[]; chart?: import("@/components/ArticleChart").ChartKey }[];
   sources?: { label: string; url: string; note: string }[];
-  readingList?: { title: string; author: string; note: string }[];
+  readingList?: { title: string; author: string; note: string; cover?: string }[];
 }
 
 export interface Ebook {
