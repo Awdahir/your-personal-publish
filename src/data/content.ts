@@ -130,7 +130,7 @@ export const POSTS: Post[] = [
     ],
     readingList: [
       { title: "Digital Minimalism: Choosing a Focused Life in a Noisy World", author: "Cal Newport", note: "A practical framework for choosing technology around your values rather than its demands." },
-      { title: "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness", author: "Jonathan Haidt", note: "An influential, debated argument about phone-based childhood, mental health, and restoring offline independence." },
+      { title: "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness", author: "Jonathan Haidt", note: "An influential, debated argument about phone-based childhood, mental health, and restoring offline independence.", cover: anxiousGenerationCover },
       { title: "Irresistible: The Rise of Addictive Technology and the Business of Keeping Us Hooked", author: "Adam Alter", note: "An exploration of behavioral compulsion and the design choices that encourage repeated engagement." },
       { title: "Dopamine Nation: Finding Balance in the Age of Indulgence", author: "Anna Lembke", note: "A clinical perspective on reward, compulsive consumption, and balance; not a diagnosis of ordinary phone use." },
       { title: "Stolen Focus: Why You Can't Pay Attention—and How to Think Deeply Again", author: "Johann Hari", note: "A wide-ranging challenge to purely individual explanations of distraction, best read with a critical eye toward its broad claims." },
