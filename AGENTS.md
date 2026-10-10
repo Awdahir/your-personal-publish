@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Blog essays stay in the existing POSTS collection; optional sources and readingList fields render references and books after the essay, so editorial citations stay attached to their article without changing routing.

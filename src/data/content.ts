@@ -7,6 +7,8 @@ export interface Post {
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
   body: { heading?: string; paragraphs: string[]; chart?: import("@/components/ArticleChart").ChartKey }[];
+  sources?: { label: string; url: string; note: string }[];
+  readingList?: { title: string; author: string; note: string }[];
 }
 
 export interface Ebook {
@@ -32,6 +34,113 @@ export const SOCIALS = {
 };
 
 export const POSTS: Post[] = [
+  {
+    slug: "take-back-your-attention-read-instead-of-scroll",
+    title: "Take Back Your Attention: Read Instead of Scroll",
+    excerpt:
+      "Your attention is not an endless resource. A case for trading the infinite feed for a finished page — and a practical digital reset that makes room for books, thought, and the people beside you.",
+    category: "Mindset",
+    date: "Oct 10, 2026",
+    readTime: "12 min",
+    art: "wave",
+    body: [
+      {
+        paragraphs: [
+          "You pick up your phone to check one thing. A message, perhaps. A headline. Then a clip makes you laugh, another makes you angry, and a third promises to explain the world in thirty seconds. When you look up, time has passed — but it is hard to name what you have gained. You have encountered plenty. Have you understood anything more deeply?",
+          "I am an avid reader, and I am now building a body of written work. That makes this question personal. I want readers, not merely impressions. I want a paragraph to stay with you long enough for you to question it, connect it to your life, or decide that I am wrong. None of that requires agreeing with me. It requires something more valuable: attention that belongs to you.",
+          "This is not a sermon against pleasure, a complaint about young people, or a demand that everyone throw away their phone. It is an invitation to notice the difference between choosing how to spend an evening and discovering, too late, that a feed has chosen for you.",
+        ],
+      },
+      {
+        heading: "The cost is not just the hours",
+        paragraphs: [
+          "TikTok, YouTube Shorts, and Instagram can be entertaining, informative, and genuinely useful. A short video can teach a skill, introduce a book, or bring an isolated person into a community. The problem is not that every clip is empty. It is that an endless succession of clips has no natural point at which to say: enough. Autoplay and personalized recommendations make continuing easier than deciding.",
+          "The cost is what that continuation displaces. A conversation becomes half a conversation. Bedtime moves later. A difficult page feels unusually demanding after a stream of effortless novelty. You may carry someone else's outrage into a room where nobody has wronged you. These are experiences to examine, not proof that every social-media user has a disorder.",
+          "There is a financial parallel here. Small expenses are not automatically wasteful, but unexamined expenses can quietly consume a budget. Attention works the same way. A few minutes of amusement are not a moral failure. A habit that repeatedly takes time from sleep, study, work, or relationships deserves an honest accounting.",
+          "The most troubling loss is agency: opening an app without deciding to, staying longer than you intended, and leaving with less energy for the life you actually value. You do not have to diagnose yourself to decide that this bargain is no longer serving you.",
+          "There is experimental evidence worth taking seriously, with limits. A 2023 study presented at the CHI conference assigned sixty participants to interruption conditions involving TikTok, Twitter, YouTube, or no activity. The TikTok condition performed worse on a task requiring people to remember a planned action. That is a finding about intention recall in a small laboratory experiment — not proof of permanent brain damage, not a test of every short-video platform, and not evidence that all video is harmful. It supports asking what rapid context switching costs us without exaggerating what one study can establish.",
+        ],
+      },
+      {
+        heading: "What Stolen Focus helped me ask",
+        paragraphs: [
+          "Johann Hari's Stolen Focus helped me put a wider frame around the problem. Its central challenge is that difficulty concentrating should not be understood only as an individual failure of discipline. The environments we inhabit — including commercial systems competing for our attention — matter too. That is a useful correction to the exhausting advice to simply try harder.",
+          "But a compelling book is not a final scientific verdict. Hari draws together research, interviews, and a broad argument about modern life. Individual findings still need to be judged on their own methods, and a sweeping story can make uncertain connections sound more settled than they are. I take the book as a provocation to investigate, not permission to repeat every claim as fact.",
+          "The question it leaves me with is practical: if I want to think deeply, why have I arranged my surroundings to interrupt me? I would not invite a stranger to tap my shoulder every few minutes while I read. Yet I have sometimes given apps precisely that privilege.",
+        ],
+      },
+      {
+        heading: "The Anxious Generation — and the honesty it demands",
+        paragraphs: [
+          "Jonathan Haidt's The Anxious Generation argues that the move from a play-based childhood toward a phone-based childhood has contributed substantially to deteriorating adolescent mental health. His discussion of sleep, social comparison, reduced independence, and the displacement of face-to-face life deserves serious consideration. Children need more than protection from bad content; they need room to grow in the physical world.",
+          "Intellectual honesty also requires stating that Haidt's causal account is contested. Rising smartphone use and worsening mental health occurring together do not, by themselves, establish how much one caused the other. Family circumstances, existing distress, economic pressures, and differences in what young people actually do online complicate the picture. Social media can also provide friendship, information, and support that some young people cannot easily find offline.",
+          "The U.S. Surgeon General's 2023 advisory describes both benefits and risks and says that we cannot conclude social media is sufficiently safe for children and adolescents. That is a call for care and better evidence, not proof that every platform harms every child. Research about adolescents should not be casually turned into a diagnosis of all adult users, either.",
+          "We can hold uncertainty and responsibility together. Protecting sleep, creating phone-free family time, and giving children opportunities for play and in-person connection do not require pretending that one book has explained an entire mental-health crisis. If online experiences are accompanying persistent distress or loss of functioning, professional support matters more than a self-help challenge.",
+        ],
+      },
+      {
+        heading: "Why I am asking you to read",
+        paragraphs: [
+          "A serious piece of writing asks you to remain with an idea after its first impression. You can pause at a claim, reread the evidence, notice a contradiction, and carry a question into the next page. Reading does not guarantee wisdom. It gives you a format in which reflection is possible without the next clip automatically replacing the thought.",
+          "There is an emotional difference, too. A good book gives another human being time to become more than a slogan. You can encounter a life unlike yours without immediately being asked to applaud, attack, or swipe away. That is part of what I value about reading: the opportunity to sit with complexity instead of treating it as a failure of presentation.",
+          "But text has no monopoly on depth. A thoughtful documentary, a lecture, a podcast, or an audiobook can sustain attention beautifully. Written material can also be manipulative, inaccurate, or shallow. For readers with visual impairments, dyslexia, or other access needs, listening may be the better route. The real distinction is not intelligent readers versus foolish viewers. It is deliberate engagement versus consumption you struggle to stop.",
+          "Choose a medium that helps you understand, and choose something worth understanding. My preference is the written page because it lets the reader set the pace. You are allowed to slow down. You are allowed to disagree. You are allowed to finish.",
+        ],
+      },
+      {
+        heading: "My own platforms are not exempt",
+        paragraphs: [
+          "I publish and share through Substack, Patreon, Twitter/X, and Payhip. I cannot honestly criticize the attention economy while pretending that an essay becomes virtuous simply because I wrote it. X is text-heavy and still has an infinite feed. Newsletters can overwhelm an inbox. Patreon can become another stream to keep up with. Payhip is a storefront; buying a digital book is not the same as reading it.",
+          "So here is the invitation I mean to make: select an essay or a book because its subject matters to you. Read it directly, save it for a planned reading session, or download a purchased book where that is available. Turn off the stream around it. Do not keep refreshing my updates. I would rather you read one piece carefully than feel obliged to follow everything I publish.",
+          "And please do not buy anything to prove that you are serious. A library book, a borrowed copy, a free essay, or a thoughtful conversation may be exactly what you need. This is an argument for owning your attention, not a sales pitch dressed as concern.",
+        ],
+      },
+      {
+        heading: "A digital reset that does not depend on heroic willpower",
+        paragraphs: [
+          "Years ago, I drafted a plan for reducing social-media distraction. Its useful idea was simple: change what is easy. Keep the tools that help you live; make the habits that consume you a little harder to enter. I would now express that plan less like a productivity formula and more like an experiment you can adapt.",
+          "Start with an audit. On an iPhone, open Settings, Screen Time, and See All App & Website Activity. On Android, look for Digital Wellbeing in Settings; labels and available measures vary by device. Review time by app, notifications, and pickups or unlocks where available. Look at a typical week rather than a single unusual day. A large number is a prompt for questions, not a diagnosis.",
+          "Then sort by purpose, not by reputation. Keep essential tools such as banking, maps, authenticators, and communication you rely on. Give boundaries to useful but distracting apps. Remove or relocate the feeds that repeatedly leave you dissatisfied. A messaging app can be vital for one person and a source of constant interruption for another; your life is the standard.",
+          "First, clear the front door. Move distracting apps off your home screen and remove feed widgets. Keep a reading app, a saved essay, or a library app within easy reach. Better still, leave a book where your phone usually waits. Make opening the feed a conscious choice rather than the first movement of your thumb.",
+          "Second, reduce invitations. Disable nonessential marketing, engagement, and news notifications. Preserve urgent calls, accessibility needs, caregiving contacts, and work requirements. Use Focus or Do Not Disturb settings, with appropriate exceptions, and choose specific times to check nonurgent updates. A quiet phone should support your responsibilities, not make you unreachable when someone needs you.",
+          "Third, set a boundary you can actually keep. Try a daily app limit or timer for the feeds you want to reduce — perhaps fifteen minutes as an initial experiment, not a universal prescription. These controls can often be overridden; they are reminders and friction, not an unbreakable lock. If the boundary repeatedly fails, adjust the environment instead of turning the result into a judgment about your character.",
+          "My earlier draft suggested that these changes could reliably recover thirty to sixty minutes a day. I cannot promise that. What you regain depends on your starting habits, responsibilities, and whether you replace one feed with another. Measure your own result. The aim is not to hit an impressive number; it is to recover time you can use intentionally.",
+        ],
+      },
+      {
+        heading: "Give the reclaimed time somewhere to go",
+        paragraphs: [
+          "For the next week, choose one book or one substantial essay. Set aside a modest reading period — twenty uninterrupted minutes is a starting point, not a scientific threshold. Put the phone beyond arm's reach if that is practical. When the impulse to check it appears, notice it without contempt and return to the page.",
+          "At the end, write two sentences: what the author argued, and what you think about it. That small act changes the relationship. You are no longer simply receiving material; you are answering it. If the writing is unconvincing, say why. If it moves you, ask what deserves to change in your life.",
+          "Review the week honestly. Did you read more? Sleep more consistently? Feel less pulled toward checking? Did the changes interfere with something important? Keep what helped and revise what did not. A sustainable habit is worth more than an ambitious detox that lasts until Thursday.",
+        ],
+      },
+      {
+        heading: "A finished page, a life still waiting",
+        paragraphs: [
+          "An infinite feed offers a peculiar promise: the next thing might be the thing you were looking for. Sometimes it is. Often the search simply continues. A page makes a different offer. Stay for a while. Think. Then leave with something you can carry.",
+          "I want us to be informed without being permanently agitated, connected without being constantly available, and entertained without surrendering every unclaimed minute. There is room for a funny clip in that life. There should also be room for silence, difficult ideas, and the people whose faces are not on a screen.",
+          "Tonight, before you open the next feed, choose one thing to read. Not because reading makes you superior. Because your mind deserves more than an endless succession of things it barely had time to meet. Your attention is part of your life. Spend it as though that life belongs to you.",
+        ],
+      },
+    ],
+    sources: [
+      { label: "U.S. Surgeon General — Social Media and Youth Mental Health (2023)", url: "https://www.hhs.gov/sites/default/files/sg-youth-mental-health-social-media-advisory.pdf", note: "An advisory outlining both benefits and risks, gaps in evidence, and recommendations for families and platforms. Its focus is children and adolescents, not a universal diagnosis of adults." },
+      { label: "Chiossi and colleagues — Short-Form Videos Degrade Our Capacity to Retain Intentions (CHI 2023)", url: "https://www.medien.ifi.lmu.de/pubdb/publications/pub/chiossi2023short/chiossi2023short.pdf", note: "A sixty-participant experiment on prospective memory during interruptions. The finding concerns the tested TikTok condition and task; it does not establish long-term harm or effects across all platforms." },
+    ],
+    readingList: [
+      { title: "Digital Minimalism: Choosing a Focused Life in a Noisy World", author: "Cal Newport", note: "A practical framework for choosing technology around your values rather than its demands." },
+      { title: "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness", author: "Jonathan Haidt", note: "An influential, debated argument about phone-based childhood, mental health, and restoring offline independence." },
+      { title: "Irresistible: The Rise of Addictive Technology and the Business of Keeping Us Hooked", author: "Adam Alter", note: "An exploration of behavioral compulsion and the design choices that encourage repeated engagement." },
+      { title: "Dopamine Nation: Finding Balance in the Age of Indulgence", author: "Anna Lembke", note: "A clinical perspective on reward, compulsive consumption, and balance; not a diagnosis of ordinary phone use." },
+      { title: "Stolen Focus: Why You Can't Pay Attention—and How to Think Deeply Again", author: "Johann Hari", note: "A wide-ranging challenge to purely individual explanations of distraction, best read with a critical eye toward its broad claims." },
+      { title: "Ten Arguments for Deleting Your Social Media Accounts Right Now", author: "Jaron Lanier", note: "A deliberately forceful critique of the incentives behind commercial social media." },
+      { title: "How to Break Up with Your Phone: The 30-Day Plan to Take Back Your Life", author: "Catherine Price", note: "A structured approach to noticing habits and rebuilding a more intentional relationship with your phone." },
+      { title: "The Chaos Machine: The Inside Story of How Social Media Rewired Our Minds and Our World", author: "Max Fisher", note: "An investigative account of platforms, recommendation systems, and their wider social consequences." },
+      { title: "Digital Madness: How Social Media Is Driving Our Mental Health Crisis—and How to Restore Our Sanity", author: "Nicholas Kardaras", note: "A strongly critical account of digital culture and mental health; weigh its sweeping conclusions against primary evidence." },
+      { title: "How to Do Nothing: Resisting the Attention Economy", author: "Jenny Odell", note: "A reflective case for resisting constant productivity and reconnecting with place, community, and the physical world." },
+    ],
+  },
   {
     slug: "illusion-of-the-average-balance-sheet",
     title: "The Illusion of the Average: What a $205 Trillion Balance Sheet Hides",
