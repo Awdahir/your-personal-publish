@@ -5,4 +5,4 @@
 - [x] Verify a blog post page renders at /blog/<slug>
 - [x] Publish the original site
 - [ ] Domain: connect/buy awdahir.finance (waiting on user purchase)
-- [ ] Add a persuasive, balanced digital-detox blog essay using the supplied draft and ten-book reading list
+- [x] Add a persuasive, balanced digital-detox blog essay using the supplied draft and ten-book reading list

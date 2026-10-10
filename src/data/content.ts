@@ -58,6 +58,7 @@ export const POSTS: Post[] = [
           "The cost is what that continuation displaces. A conversation becomes half a conversation. Bedtime moves later. A difficult page feels unusually demanding after a stream of effortless novelty. You may carry someone else's outrage into a room where nobody has wronged you. These are experiences to examine, not proof that every social-media user has a disorder.",
           "There is a financial parallel here. Small expenses are not automatically wasteful, but unexamined expenses can quietly consume a budget. Attention works the same way. A few minutes of amusement are not a moral failure. A habit that repeatedly takes time from sleep, study, work, or relationships deserves an honest accounting.",
           "The most troubling loss is agency: opening an app without deciding to, staying longer than you intended, and leaving with less energy for the life you actually value. You do not have to diagnose yourself to decide that this bargain is no longer serving you.",
+          "There is experimental evidence worth taking seriously, with limits. A 2023 study presented at the CHI conference assigned sixty participants to interruption conditions involving TikTok, Twitter, YouTube, or no activity. The TikTok condition performed worse on a task requiring people to remember a planned action. That is a finding about intention recall in a small laboratory experiment — not proof of permanent brain damage, not a test of every short-video platform, and not evidence that all video is harmful. It supports asking what rapid context switching costs us without exaggerating what one study can establish.",
         ],
       },
       {
@@ -122,6 +123,10 @@ export const POSTS: Post[] = [
           "Tonight, before you open the next feed, choose one thing to read. Not because reading makes you superior. Because your mind deserves more than an endless succession of things it barely had time to meet. Your attention is part of your life. Spend it as though that life belongs to you.",
         ],
       },
+    ],
+    sources: [
+      { label: "U.S. Surgeon General — Social Media and Youth Mental Health (2023)", url: "https://www.hhs.gov/sites/default/files/sg-youth-mental-health-social-media-advisory.pdf", note: "An advisory outlining both benefits and risks, gaps in evidence, and recommendations for families and platforms. Its focus is children and adolescents, not a universal diagnosis of adults." },
+      { label: "Chiossi and colleagues — Short-Form Videos Degrade Our Capacity to Retain Intentions (CHI 2023)", url: "https://www.medien.ifi.lmu.de/pubdb/publications/pub/chiossi2023short/chiossi2023short.pdf", note: "A sixty-participant experiment on prospective memory during interruptions. The finding concerns the tested TikTok condition and task; it does not establish long-term harm or effects across all platforms." },
     ],
     readingList: [
       { title: "Digital Minimalism: Choosing a Focused Life in a Noisy World", author: "Cal Newport", note: "A practical framework for choosing technology around your values rather than its demands." },
