@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Store } from "@/pages/Store";
+import { useSiteNavigate } from "@/lib/nav";
 
 export const Route = createFileRoute("/store")({
   head: () => ({
@@ -22,5 +23,6 @@ export const Route = createFileRoute("/store")({
 });
 
 function StorePage() {
-  return <Store />;
+  const onNavigate = useSiteNavigate();
+  return <Store onNavigate={onNavigate} />;
 }
