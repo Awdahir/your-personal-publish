@@ -78,11 +78,6 @@ export function Store({ onNavigate }: { onNavigate: (page: Page, slug?: string) 
             <Reveal key={book.id} delay={i * 80}>
               <article className="flex h-full flex-col items-center text-center">
                 <a href={book.payhipUrl} target="_blank" rel="noreferrer" className="relative block w-full">
-                  {book.badge && (
-                    <span className="absolute left-3 top-3 z-10 rounded-full bg-ink px-2.5 py-0.5 font-mono text-[0.55rem] uppercase tracking-[0.18em] text-chart">
-                      {book.badge}
-                    </span>
-                  )}
                   <BookCover book={book} />
                 </a>
                 <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink/50">
