@@ -1,10 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { BookCover } from "@/components/BookCover";
-import { EBOOKS, SOCIALS } from "@/data/content";
+import { EBOOKS, POSTS, SOCIALS } from "@/data/content";
+import { PostArt } from "@/components/PostArt";
+import type { Page } from "@/types/navigation";
 import bookCover from "@/assets/book-cover-a.jpg";
 
-export function Store() {
+export function Store({ onNavigate }: { onNavigate: (page: Page, slug?: string) => void }) {
   return (
     <div className="mx-auto max-w-[1360px] px-6 pb-24 pt-32 md:px-8 md:pt-44">
       <Reveal>
@@ -63,47 +65,76 @@ export function Store() {
         </div>
       </Reveal>
 
-      <div className="mt-20 space-y-20">
-        {EBOOKS.map((book, i) => (
-          <Reveal key={book.id}>
-            <div
-              className={`grid items-center gap-10 md:grid-cols-2 ${
-                i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
-              }`}
-            >
-              <div className="mx-auto w-full max-w-sm">
-                <BookCover book={book} />
-              </div>
-              <div>
-                <div className="flex items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink/55">
-                  {book.badge && (
-                    <span className="rounded-full bg-ink px-2.5 py-0.5 text-chart">{book.badge}</span>
-                  )}
-                  <span>{book.pages}</span>
-                  <span>·</span>
-                  <span>{book.format}</span>
-                </div>
-                <h2 className="mt-5 font-serif text-3xl leading-tight tracking-tight md:text-4xl">
-                  {book.title}
-                </h2>
-                <p className="mt-2 font-serif text-lg italic text-ink/55">{book.subtitle}</p>
-                <p className="mt-5 max-w-lg leading-relaxed text-ink/70">{book.description}</p>
-                <div className="mt-8 flex flex-wrap items-center gap-6">
-                  <a
-                    href={book.payhipUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-chart transition-colors hover:bg-ink/85"
-                  >
-                    Buy {book.price} on Payhip <ArrowUpRight size={14} />
-                  </a>
-                  <span className="font-serif text-3xl">{book.price}</span>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+      {/* Start here — Payhip-style centered product grid */}
+      <section className="mt-24 border-t border-ink/15 pt-16">
+        <Reveal>
+          <h2 className="text-center font-serif text-3xl tracking-tight md:text-4xl">Start Here</h2>
+          <p className="mx-auto mt-3 max-w-md text-center text-sm text-ink/60">
+            Digital guides, delivered instantly through Payhip.
+          </p>
+        </Reveal>
+        <div className="mt-12 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
+          {EBOOKS.map((book, i) => (
+            <Reveal key={book.id} delay={i * 80}>
+              <article className="flex h-full flex-col items-center text-center">
+                <a href={book.payhipUrl} target="_blank" rel="noreferrer" className="relative block w-full">
+                  <BookCover book={book} />
+                </a>
+                <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink/50">
+                  {book.pages} · {book.format}
+                </p>
+                <h3 className="mt-3 font-serif text-2xl leading-snug tracking-tight">{book.title}</h3>
+                <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-ink/65">{book.description}</p>
+                <p className="mt-4 font-serif text-2xl">{book.price}</p>
+                <a
+                  href={book.payhipUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-chart transition-colors hover:bg-ink/85"
+                >
+                  Buy on Payhip <ArrowUpRight size={13} />
+                </a>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* From the blog */}
+      <section className="mt-28 border-t border-ink/15 pt-16">
+        <Reveal>
+          <h2 className="text-center font-serif text-3xl tracking-tight md:text-4xl">From the Blog</h2>
+        </Reveal>
+        <div className="mt-12 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          {POSTS.slice(0, 4).map((post, i) => (
+            <Reveal key={post.slug} delay={i * 80}>
+              <article className="flex flex-col items-center text-center">
+                <button onClick={() => onNavigate("post", post.slug)} className="block w-full" aria-label={post.title}>
+                  <PostArt art={post.art} className="aspect-[16/9] w-full" />
+                </button>
+                <p className="mt-6 text-sm text-ink/55">{post.date}</p>
+                <h3 className="mt-4 font-serif text-2xl leading-snug tracking-tight">
+                  <button onClick={() => onNavigate("post", post.slug)} className="hover:text-ink/70">
+                    {post.title}
+                  </button>
+                </h3>
+                <p className="mt-3 line-clamp-5 text-sm leading-relaxed text-ink/65">{post.excerpt}</p>
+                <button onClick={() => onNavigate("post", post.slug)} className="link-underline mt-4 text-sm">
+                  Read More
+                </button>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+        <div className="mt-14 text-center">
+          <button
+            onClick={() => onNavigate("blog")}
+            className="inline-flex rounded-full border border-ink px-7 py-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] transition-colors hover:bg-ink hover:text-paper"
+          >
+            View All
+          </button>
+        </div>
+      </section>
 
       {/* guarantee / note */}
       <Reveal>
