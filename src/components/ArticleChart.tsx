@@ -1,5 +1,13 @@
 import type React from "react";
-export type ChartKey = "balance-sheet" | "wealth-share" | "asset-mix" | "debt-income";
+export type ChartKey =
+  | "balance-sheet"
+  | "wealth-share"
+  | "asset-mix"
+  | "debt-income"
+  | "compound-growth"
+  | "fund-managers"
+  | "savings-rate"
+  | "withdrawal-rates";
 
 interface Seg { label: string; value: number; cls: string }
 
