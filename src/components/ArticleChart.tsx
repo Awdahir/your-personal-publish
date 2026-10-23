@@ -1,5 +1,13 @@
 import type React from "react";
-export type ChartKey = "balance-sheet" | "wealth-share" | "asset-mix" | "debt-income";
+export type ChartKey =
+  | "balance-sheet"
+  | "wealth-share"
+  | "asset-mix"
+  | "debt-income"
+  | "compound-growth"
+  | "fund-managers"
+  | "savings-rate"
+  | "withdrawal-rates";
 
 interface Seg { label: string; value: number; cls: string }
 
@@ -99,6 +107,51 @@ const CHARTS: Record<ChartKey, { title: string; source: string; body: () => Reac
       <Bars unit="¢" max={200} rows={[
         { label: "Canada", value: 175, cls: "bg-ink" },
         { label: "United States", value: 100, cls: "bg-chart" },
+      ]} />
+    ),
+  },
+  "compound-growth": {
+    title: "Three ways to a million: investing from 1975 to 2015",
+    source: "Source: The Simple Path to Wealth, Ch. 3. Assumes the S&P 500's ~11.9% average annual return with dividends reinvested over that specific 40-year window. Past returns do not guarantee future results.",
+    body: () => (
+      <Bars unit="M" max={1.3} rows={[
+        { label: "$12,000 invested once", value: 1.08, cls: "bg-ink" },
+        { label: "$130 every month", value: 0.99, cls: "bg-chart" },
+        { label: "$150 every month", value: 1.14, cls: "bg-mint" },
+      ]} />
+    ),
+  },
+  "fund-managers": {
+    title: "Share of professional stock-pickers who beat a simple index fund",
+    source: "Sources: Vanguard research on 1,540 active funds, 1998–2013 (18% survived and beat the index); Barras, Scaillet & Wermers, Journal of Finance 2010 (0.6% showed genuine skill); Barber & Odean on frequent traders (~1%).",
+    body: () => (
+      <Bars unit="%" max={20} rows={[
+        { label: "Active funds, 15 yrs (Vanguard)", value: 18, cls: "bg-chart" },
+        { label: "Active funds, 30 yrs (academic study)", value: 0.6, cls: "bg-ink" },
+        { label: "Frequent individual traders", value: 1, cls: "bg-brick" },
+      ]} />
+    ),
+  },
+  "savings-rate": {
+    title: "Years of work until financial independence, by savings rate",
+    source: "Source: 'The Shockingly Simple Math Behind Early Retirement,' Mr. Money Mustache (2012). Assumes 5% real investment returns and a 4% withdrawal rate; illustrative, not a promise.",
+    body: () => (
+      <Bars unit=" yrs" max={55} rows={[
+        { label: "Save 10% of income", value: 51, cls: "bg-brick" },
+        { label: "Save 20%", value: 37, cls: "bg-mint" },
+        { label: "Save 30%", value: 28, cls: "bg-chart" },
+        { label: "Save 50%", value: 17, cls: "bg-ink" },
+      ]} />
+    ),
+  },
+  "withdrawal-rates": {
+    title: "How often a retirement portfolio survived 30 years (Trinity Study)",
+    source: "Source: Trinity Study (Cooley, Hubbard & Walz, 1998; updated 2009), as discussed in The Simple Path to Wealth, Ch. 29. 50/50 stock-bond portfolio; the 7% row gives up annual inflation raises.",
+    body: () => (
+      <Bars unit="%" max={100} rows={[
+        { label: "Withdraw 3% a year", value: 100, cls: "bg-ink" },
+        { label: "Withdraw 4% a year", value: 96, cls: "bg-chart" },
+        { label: "Withdraw 7%, no inflation raises", value: 85, cls: "bg-brick" },
       ]} />
     ),
   },
