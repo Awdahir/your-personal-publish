@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Add the uploaded six mental models article to Blog and Insights and verify both pages
+- [x] Add the uploaded six mental models article to Blog and Insights and verify both pages
 
 - [x] Import blog code from GitHub (Awdahir-Site) and port to TanStack Start
 - [x] Verify pages render (home, blog, about, store, post)
