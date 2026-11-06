@@ -1,4 +1,5 @@
 import anxiousGenerationCover from "@/assets/anxious-generation-cover.jpg.asset.json";
+import { SIMPLE_PATH_POST } from "./simplePath";
 
 export interface Post {
   slug: string;
@@ -36,6 +37,7 @@ export const SOCIALS = {
 };
 
 export const POSTS: Post[] = [
+  SIMPLE_PATH_POST,
   {
     slug: "take-back-your-attention-read-instead-of-scroll",
     title: "Take Back Your Attention: Read Instead of Scroll",
