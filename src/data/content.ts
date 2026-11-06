@@ -1,5 +1,6 @@
 import anxiousGenerationCover from "@/assets/anxious-generation-cover.jpg.asset.json";
 import { SIMPLE_PATH_POST } from "./simplePath";
+import { SIX_MODELS_POST } from "./sixModels";
 
 export interface Post {
   slug: string;
@@ -37,6 +38,7 @@ export const SOCIALS = {
 };
 
 export const POSTS: Post[] = [
+  SIX_MODELS_POST,
   SIMPLE_PATH_POST,
   {
     slug: "take-back-your-attention-read-instead-of-scroll",

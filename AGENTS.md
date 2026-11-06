@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Blog essays stay in the existing POSTS collection; optional sources and readingList fields render references and books after the essay, so editorial citations stay attached to their article without changing routing.
+- Articles requested in both Blog and Insights share one typed content record, including optional sources, to prevent text and citations from diverging.

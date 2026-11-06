@@ -60,6 +60,22 @@ export function InsightPost({ slug, onNavigate }: InsightPostProps) {
           </div>
         ))}
 
+        {note.sources && (
+          <section aria-labelledby="insight-sources" className="mt-12 border-t border-ink/20 pt-4">
+            <h3 id="insight-sources">Evidence and further context</h3>
+            <ul className="space-y-5">
+              {note.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noreferrer" className="link-underline font-medium text-ink underline underline-offset-4">
+                    {source.label} <ArrowUpRight size={13} className="inline" />
+                  </a>
+                  <div className="mt-2 text-sm leading-relaxed text-ink/65">{source.note}</div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {/* disclaimer + share strip */}
         <div className="mt-16 border-y border-ink/20 py-8">
           <p className="font-mono text-[0.68rem] leading-relaxed tracking-wide text-ink/50">
