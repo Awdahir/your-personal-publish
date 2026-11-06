@@ -1,3 +1,5 @@
+import { SIX_MODELS_POST } from "./sixModels";
+
 /**
  * Market Insights — shorter, timely notes on market structure and trend shifts.
  * Written only when there's genuinely something worth sitting down to say.
@@ -12,9 +14,21 @@ export interface Insight {
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
   body: { heading?: string; paragraphs: string[]; chart?: import("@/components/ArticleChart").ChartKey }[];
+  sources?: { label: string; url: string; note: string }[];
 }
 
 export const INSIGHTS: Insight[] = [
+  {
+    slug: SIX_MODELS_POST.slug,
+    title: SIX_MODELS_POST.title,
+    excerpt: SIX_MODELS_POST.excerpt,
+    tag: "Decision-making",
+    date: SIX_MODELS_POST.date,
+    readTime: SIX_MODELS_POST.readTime,
+    art: SIX_MODELS_POST.art,
+    body: SIX_MODELS_POST.body,
+    sources: SIX_MODELS_POST.sources,
+  },
   {
     slug: "205-trillion-mirage",
     title: "A $205 Trillion Mirage: Reading the Household Balance Sheet",
