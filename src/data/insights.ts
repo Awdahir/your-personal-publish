@@ -14,7 +14,7 @@ export interface Insight {
   date: string;
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
-  body: { heading?: string; paragraphs: string[]; chart?: import("@/components/ArticleChart").ChartKey }[];
+  body: Post["body"];
   sources?: { label: string; url: string; note: string }[];
 }
 
