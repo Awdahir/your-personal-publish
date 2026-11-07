@@ -1,8 +1,7 @@
-import { Fragment } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { PostArt } from "@/components/PostArt";
-import { ArticleChart } from "@/components/ArticleChart";
+import { ArticleBody } from "@/components/ArticleBody";
 import { INSIGHTS } from "@/data/insights";
 import { SOCIALS } from "@/data/content";
 import type { Page } from "@/types/navigation";
@@ -51,30 +50,7 @@ export function InsightPost({ slug, onNavigate }: InsightPostProps) {
       </Reveal>
 
       <div className="article-body mx-auto mt-14 max-w-[44rem] px-6">
-        {note.body.map((section, i) => (
-          <div key={i}>
-            {section.heading && <h3>{section.heading}</h3>}
-            {section.paragraphs.map((p, j) => (
-              <Fragment key={j}>
-                <p>{p}</p>
-                {section.images
-                  ?.filter((image) => image.afterParagraph === j + 1)
-                  .map((image) => (
-                    <figure key={image.url} className="my-10 border border-ink/20 bg-paper2 p-2">
-                      <img
-                        src={image.url}
-                        alt={image.alt}
-                        loading="lazy"
-                        decoding="async"
-                        className="img-zoom block w-full"
-                      />
-                    </figure>
-                  ))}
-              </Fragment>
-            ))}
-            {section.chart && <ArticleChart chart={section.chart} />}
-          </div>
-        ))}
+        <ArticleBody body={note.body} markdown={note.markdown} />
 
         {note.sources && (
           <section aria-labelledby="insight-sources" className="mt-12 border-t border-ink/20 pt-4">

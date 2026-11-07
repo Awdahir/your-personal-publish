@@ -157,6 +157,10 @@ const CHARTS: Record<ChartKey, { title: string; source: string; body: () => Reac
   },
 };
 
+export function isChartKey(value: string): value is ChartKey {
+  return Object.prototype.hasOwnProperty.call(CHARTS, value);
+}
+
 export function ArticleChart({ chart }: { chart: ChartKey }) {
   const c = CHARTS[chart];
   return (
