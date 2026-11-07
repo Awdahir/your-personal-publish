@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { PostArt } from "@/components/PostArt";
@@ -51,7 +52,22 @@ export function Post({ slug, onNavigate }: PostProps) {
           <div key={i}>
             {section.heading && <h3>{section.heading}</h3>}
             {section.paragraphs.map((p, j) => (
-              <p key={j}>{p}</p>
+              <Fragment key={j}>
+                <p>{p}</p>
+                {section.images
+                  ?.filter((image) => image.afterParagraph === j + 1)
+                  .map((image) => (
+                    <figure key={image.url} className="my-10 border border-ink/20 bg-paper2 p-2">
+                      <img
+                        src={image.url}
+                        alt={image.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="img-zoom block w-full"
+                      />
+                    </figure>
+                  ))}
+              </Fragment>
             ))}
             {section.chart && <ArticleChart chart={section.chart} />}
           </div>

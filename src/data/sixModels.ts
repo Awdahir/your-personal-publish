@@ -1,3 +1,8 @@
+import asymmetricBetsImage from "@/assets/asymmetric-bets.png.asset.json";
+import decisionTreeImage from "@/assets/immigrant-decision-tree.png.asset.json";
+import economicNumbersImage from "@/assets/immigrant-economic-numbers.png.asset.json";
+import runwayImage from "@/assets/margin-of-safety-runway.png.asset.json";
+import sixModelsImage from "@/assets/six-mental-models-overview.png.asset.json";
 import type { Post } from "./content";
 
 export const SIX_MODELS_POST: Post = {
@@ -19,6 +24,13 @@ export const SIX_MODELS_POST: Post = {
         "So the gap is not effort. The gap is decision quality. Hard work is the engine. Decisions are the steering wheel. Too many of us are driving a powerful engine with no hands on the wheel — because nobody handed us the operating system this country runs on.",
         "I am an economist and an immigrant, and I spent years asking the wrong question — why do immigrants work so hard? The better question is why we decide so defensively. The answer I kept finding came from an odd place: great investors. People like Buffett, Munger, and Grove think in mental models — reusable thinking tools that turn chaos into choices. Six of those tools fit immigrant life like they were designed for us.",
         "Here they are — six tools I stole from investors and smuggled across the border. For each one, I will give you what it is in plain words, why it fits our lives, and an immigrant who lived it. Steal them back."
+      ],
+      "images": [
+        {
+          "url": sixModelsImage.url,
+          "alt": "Six mental models for money decisions in a new country: second-order thinking, inversion, opportunity cost, margin of safety, asymmetric bets, and map versus territory.",
+          "afterParagraph": 6
+        }
       ]
     },
     {
@@ -59,6 +71,13 @@ export const SIX_MODELS_POST: Post = {
         "Elon Musk ran this calculation brutally in 1995. He had emigrated from South Africa at 17, reached the US via Canada and the University of Pennsylvania, and arrived at Stanford to start a PhD in applied physics. He lasted two days. His reasoning: the internet was opening a once-in-a-generation frontier, and the opportunity cost of five years in a lab exceeded the value of the degree. He left, co-founded Zip2, and sold it to Compaq for $307 million in 1999. The degree would always be there. The window would not.",
         "And the numbers suggest immigrants are unusually willing to pay the opportunity cost of entrepreneurship. The National Foundation for American Policy reported in 2026 that immigrants founded or co-founded 59% of America's billion-dollar startups — 455 of 775 — nearly a quarter of them founded by people who first arrived as international students.",
         "Try this: for your next big yes, write down the best thing you are saying no to. Give it a dollar figure and a year figure. If the no looks more valuable than the yes, you have your answer."
+      ],
+      "images": [
+        {
+          "url": economicNumbersImage.url,
+          "alt": "Chart titled Immigrants and the Numbers (US), showing selected statistics about entrepreneurship, emergency savings, population share, and remittances.",
+          "afterParagraph": 6
+        }
       ]
     },
     {
@@ -72,6 +91,13 @@ export const SIX_MODELS_POST: Post = {
         "Hamdi Ulukaya ran his entire company on this principle. A Kurdish immigrant from Turkey who arrived in 1994, he spotted a junk-mail flyer in 2005 advertising a shuttered 84-year-old yogurt plant Kraft was abandoning in upstate New York. He fished the flyer out of the trash and bought the plant with a Small Business Administration loan — against his attorney's advice. Here is the margin-of-safety part: no gleaming new facility. He bought a closed factory at scrap value, kept costs brutally low, and grew Chobani without betting money he did not have. Downside capped: an old plant and a government-backed loan. Upside: roughly $1.5 billion in annual revenue by 2016. In April 2016 he gave 10% of the company to his 2,000 full-time employees, from his own stake. Margin of safety, it turns out, makes you brave enough to be generous too.",
         "I have watched too many immigrant families learn this model the hard way, which is why my book Modern Money devotes a full chapter to building a runway — the chapter I would read first.",
         "Try this: open a separate savings account this week — a boring one, at a real bank — and name it \"Runway.\" Automate even $50 a month into it. You are not saving money. You are buying the right to say no."
+      ],
+      "images": [
+        {
+          "url": runwayImage.url,
+          "alt": "The Margin of Safety Runway chart, comparing zero, one, three, six, and twelve months of essential expenses covered with zero income.",
+          "afterParagraph": 6
+        }
       ]
     },
     {
@@ -84,6 +110,13 @@ export const SIX_MODELS_POST: Post = {
         "Jensen Huang shows what the asymmetric bet looks like from the inside. He came from Taiwan as a boy, cleaned bathrooms at a Kentucky boarding school, washed dishes at Denny's, and co-founded NVIDIA in 1993. By 1997 the company was dying: its first chip had flopped, half the staff was laid off, about one month of payroll remained. Huang bet everything on a new chip, the RIVA 128, tested entirely in simulation, before any physical chip existed. If it failed, NVIDIA died — downside capped and total. If it worked, the company lived. It sold roughly a million units in four months. Then he spent a decade funding CUDA, an unprofitable software bet Wall Street hated, until it became the foundation of the entire AI boom.",
         "Or take Jan Koum, who arrived from Soviet Ukraine at 16 and swept grocery-store floors while his mother collected food stamps. Rejected for a job at Facebook, he nearly folded his tiny messaging app in 2009; his co-founder Brian Acton talked him out of quitting. Koum kept WhatsApp brutally lean — no ads, no games, no gimmicks. Tiny costs, open upside. In February 2014 Facebook bought it for $19 billion, and Koum signed the deal on the door of the social-services office where he had once queued for food stamps. Forbes documented that detail. You could not invent a better one.",
         "Try this: list three bets available to you this year where the loss is capped and the gain is open — a course, a certification, a side business, a first $100 in an index fund. Take one. The asymmetry is already yours; the bet is just claiming it."
+      ],
+      "images": [
+        {
+          "url": asymmetricBetsImage.url,
+          "alt": "Asymmetric Bets diagram showing a small, capped risk zone and a large, open-ended reward zone, with examples including a night course, side business, and index funds.",
+          "afterParagraph": 6
+        }
       ]
     },
     {
@@ -107,6 +140,13 @@ export const SIX_MODELS_POST: Post = {
         "Question 4 — Room for error (Margin of safety). Can I still do this if my hours get cut or the rent rises? If the plan only works when life behaves, shrink it until it works when life does not.",
         "Question 5 — Capped downside, open upside (Asymmetry). Investing $500 a month: worst realistic case, it loses value for a while; best case, it compounds for thirty years. Sending it: capped upside, endless repetition. And behind both sits the map question — am I choosing this because it is right here, or because it was right there?",
         "Most real decisions die at Question 1, which is the point. The tree has one job: keep you solvent while you become brilliant."
+      ],
+      "images": [
+        {
+          "url": decisionTreeImage.url,
+          "alt": "The Immigrant Decision Tree flowchart: decide fast and learn cheap when a decision is reversible; otherwise check whether the downside is survivable and whether the upside is much bigger than the downside.",
+          "afterParagraph": 7
+        }
       ]
     },
     {
