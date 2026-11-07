@@ -15,6 +15,7 @@ export interface Insight {
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
   body: Post["body"];
+  markdown?: Post["markdown"];
   sources?: { label: string; url: string; note: string }[];
 }
 
@@ -28,6 +29,7 @@ export const INSIGHTS: Insight[] = [
     readTime: SIX_MODELS_POST.readTime,
     art: SIX_MODELS_POST.art,
     body: SIX_MODELS_POST.body,
+    markdown: SIX_MODELS_POST.markdown,
     sources: SIX_MODELS_POST.sources,
   },
   {

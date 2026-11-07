@@ -24,6 +24,7 @@ export interface Post {
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
   body: ArticleSection[];
+  markdown?: string;
   sources?: { label: string; url: string; note: string }[];
   readingList?: { title: string; author: string; note: string; cover?: { url: string } }[];
 }

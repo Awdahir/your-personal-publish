@@ -11,3 +11,4 @@
 
 - Blog essays stay in the existing POSTS collection; optional sources and readingList fields render references and books after the essay, so editorial citations stay attached to their article without changing routing.
 - Articles requested in both Blog and Insights share one typed content record, including optional sources, to prevent text and citations from diverging.
+- Both article templates use ArticleBody: optional raw-imported Markdown takes precedence over legacy sections; fenced chart blocks resolve only allowlisted ArticleChart keys, never executable MDX, to keep authoring safe and existing articles intact.

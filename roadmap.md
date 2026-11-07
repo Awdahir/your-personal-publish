@@ -1,5 +1,6 @@
 # Roadmap
 
+- [ ] Support Markdown article bodies with chart blocks in Blog and Insights; verify Markdown and existing articles
 - [x] Add the uploaded six mental models article to Blog and Insights and verify both pages
 
 - [x] Import blog code from GitHub (Awdahir-Site) and port to TanStack Start
