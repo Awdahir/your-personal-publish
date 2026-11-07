@@ -1,4 +1,5 @@
 import { SIX_MODELS_POST } from "./sixModels";
+import type { Post } from "./content";
 
 /**
  * Market Insights — shorter, timely notes on market structure and trend shifts.

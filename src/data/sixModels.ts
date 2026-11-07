@@ -1,3 +1,8 @@
+import asymmetricBetsImage from "@/assets/asymmetric-bets.png.asset.json";
+import decisionTreeImage from "@/assets/immigrant-decision-tree.png.asset.json";
+import economicNumbersImage from "@/assets/immigrant-economic-numbers.png.asset.json";
+import runwayImage from "@/assets/margin-of-safety-runway.png.asset.json";
+import sixModelsImage from "@/assets/six-mental-models-overview.png.asset.json";
 import type { Post } from "./content";
 
 export const SIX_MODELS_POST: Post = {

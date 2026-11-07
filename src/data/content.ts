@@ -2,6 +2,19 @@ import anxiousGenerationCover from "@/assets/anxious-generation-cover.jpg.asset.
 import { SIMPLE_PATH_POST } from "./simplePath";
 import { SIX_MODELS_POST } from "./sixModels";
 
+export interface ArticleImage {
+  url: string;
+  alt: string;
+  afterParagraph: number;
+}
+
+export interface ArticleSection {
+  heading?: string;
+  paragraphs: string[];
+  chart?: import("@/components/ArticleChart").ChartKey;
+  images?: ArticleImage[];
+}
+
 export interface Post {
   slug: string;
   title: string;
@@ -10,7 +23,7 @@ export interface Post {
   date: string;
   readTime: string;
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
-  body: { heading?: string; paragraphs: string[]; chart?: import("@/components/ArticleChart").ChartKey }[];
+  body: ArticleSection[];
   sources?: { label: string; url: string; note: string }[];
   readingList?: { title: string; author: string; note: string; cover?: { url: string } }[];
 }

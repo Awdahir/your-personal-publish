@@ -9,3 +9,4 @@
 - [ ] Domain: connect/buy awdahir.finance (waiting on user purchase)
 - [x] Add a persuasive, balanced digital-detox blog essay using the supplied draft and ten-book reading list
 - [x] Finish the requested Simple Path to Wealth chapter guide with sourced charts and verify it on the blog
+- [ ] Place the five supplied illustrations at their marked paragraphs in the shared six-models article and verify Blog and Insights
