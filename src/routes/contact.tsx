@@ -4,7 +4,7 @@ import { Contact } from "@/pages/Contact";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Awdahir" },
+      { title: "Contact — The Immigrant Economist" },
       {
         name: "description",
         content: "Get in touch with Awdahir — questions, feedback and collaborations.",

@@ -5,20 +5,23 @@ import { useSiteNavigate } from "@/lib/nav";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Awdahir — Personal Finance, Without the Jargon" },
+      { title: "The Immigrant Economist — Personal Finance for Immigrants, Without the Jargon" },
       {
         name: "description",
         content:
-          "Essays, tools and digital books for people who want their money to work — without the jargon.",
+          "Essays, tools and digital books by Abdizalaam Awdahir — personal finance for people building wealth in a new country, without the jargon.",
       },
-      { property: "og:title", content: "Awdahir — Personal Finance, Without the Jargon" },
+      { property: "og:title", content: "The Immigrant Economist — Personal Finance for Immigrants, Without the Jargon" },
       {
         property: "og:description",
         content:
-          "Essays, tools and digital books for people who want their money to work — without the jargon.",
+          "Essays, tools and digital books by Abdizalaam Awdahir — personal finance for people building wealth in a new country, without the jargon.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://immigranteconomist.com" },
+      { property: "og:image", content: "https://immigranteconomist.com/og-default.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://immigranteconomist.com/og-default.png" },
     ],
   }),
   component: Index,

@@ -57,7 +57,7 @@ export function Blog({ onNavigate }: BlogProps) {
             onClick={() => onNavigate("post", lead.slug)}
             className="group mt-14 grid w-full gap-0 border border-ink/20 text-left md:grid-cols-2"
           >
-            <PostArt art={lead.art} className="aspect-[4/3] border-b border-ink/20 md:aspect-auto md:border-b-0 md:border-r" />
+            <PostArt art={lead.art} slug={lead.slug} className="aspect-[4/3] border-b border-ink/20 md:aspect-auto md:border-b-0 md:border-r" />
             <div className="flex flex-col justify-center bg-paper2 p-8 md:p-12">
               <div className="flex items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink/55">
                 <span className="rounded-full bg-chart px-2.5 py-0.5 text-ink">Latest</span>
@@ -82,7 +82,7 @@ export function Blog({ onNavigate }: BlogProps) {
         {rest.map((post, i) => (
           <Reveal key={post.slug} delay={i * 80}>
             <button onClick={() => onNavigate("post", post.slug)} className="group block w-full text-left">
-              <PostArt art={post.art} className="aspect-[4/3] border border-ink/20" />
+              <PostArt art={post.art} slug={post.slug} className="aspect-[4/3] border border-ink/20" />
               <div className="mt-5 flex items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.18em] text-ink/55">
                 <span>{post.category}</span>
                 <span>·</span>

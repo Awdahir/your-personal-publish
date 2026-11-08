@@ -15,7 +15,7 @@ export function About({ onNavigate }: { onNavigate: (page: Page) => void }) {
               About
             </p>
             <h1 className="mt-6 font-serif text-[clamp(2.6rem,6vw,4.6rem)] leading-[1.03] tracking-[-0.02em]">
-              Hi, I'm <em>Awdahir</em>.<br />
+              Hi, I'm <em>Abdizalaam Awdahir</em>.<br />
               I make money make sense.
             </h1>
           </Reveal>
@@ -35,7 +35,8 @@ export function About({ onNavigate }: { onNavigate: (page: Page) => void }) {
                 nobody teaches the <em>habits</em> that make it stick.
               </p>
               <p>
-                That's what Awdahir.com is for. I write weekly essays, build
+                That's what The Immigrant Economist is for. I write weekly
+                essays, build
                 practical tools, and publish digital books that turn money
                 fundamentals into systems you can actually run. No jargon, no
                 get-rich-quick, no shame. Just clear thinking about the money

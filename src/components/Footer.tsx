@@ -1,4 +1,5 @@
-import { SOCIALS } from "@/data/content";
+import { SOCIALS, POSTS } from "@/data/content";
+import { INSIGHTS } from "@/data/insights";
 import { useSiteNavigate } from "@/lib/nav";
 import type { Page } from "@/types/navigation";
 
@@ -14,9 +15,9 @@ export function Footer() {
               Money, made <em className="text-chart not-italic font-serif italic">simple</em>.
             </p>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-paper/60">
-              Awdahir is an independent personal finance publication. Essays,
-              tools and digital books for people who want their money to work —
-              without the jargon.
+              The Immigrant Economist is the personal finance publication of
+              Abdizalaam Awdahir — essays, tools and digital books for people
+              building wealth in a new country, without the jargon.
             </p>
           </div>
 
@@ -82,9 +83,38 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-3 border-t border-paper/15 pt-8 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-paper/40 md:flex-row md:items-center md:justify-between">
-          <span>© {new Date().getFullYear()} Awdahir.com — All rights reserved</span>
-          <span>Personal finance, without the jargon</span>
+        {/* crawlable index of every post — real links for readers, crawlers and prerendering */}
+        <nav aria-label="Every essay and insight" className="mt-16 border-t border-paper/15 pt-8">
+          <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-paper/40">
+            Every essay
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+            {POSTS.map((p) => (
+              <li key={p.slug}>
+                <a
+                  href={`/blog/${p.slug}`}
+                  className="link-underline font-mono text-[0.68rem] uppercase tracking-[0.14em] text-paper/50 transition-colors hover:text-paper"
+                >
+                  {p.title}
+                </a>
+              </li>
+            ))}
+            {INSIGHTS.map((n) => (
+              <li key={`i-${n.slug}`}>
+                <a
+                  href={`/insights/${n.slug}`}
+                  className="link-underline font-mono text-[0.68rem] uppercase tracking-[0.14em] text-paper/40 transition-colors hover:text-paper"
+                >
+                  {n.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="mt-12 flex flex-col gap-3 border-t border-paper/15 pt-8 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-paper/40 md:flex-row md:items-center md:justify-between">
+          <span>© {new Date().getFullYear()} immigranteconomist.com — All rights reserved</span>
+          <span>The Immigrant Economist — personal finance without the jargon</span>
         </div>
       </div>
     </footer>

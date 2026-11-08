@@ -19,9 +19,9 @@ export function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`[Awdahir.com] ${topic} — from ${name}`);
+    const subject = encodeURIComponent(`[immigranteconomist.com] ${topic} — from ${name}`);
     const body = encodeURIComponent(
-      `Hi Awdahir,\n\n${message}\n\n— ${name}\n${email}`
+      `Hi Abdizalaam,\n\n${message}\n\n— ${name}\n${email}`
     );
     window.location.href = `mailto:${SOCIALS.email}?subject=${subject}&body=${body}`;
   };

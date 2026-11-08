@@ -1,4 +1,4 @@
-import anxiousGenerationCover from "@/assets/anxious-generation-cover.jpg.asset.json";
+import anxiousGenerationCover from "@/assets/anxious-generation-cover.jpg";
 import { SIMPLE_PATH_POST } from "./simplePath";
 import { SIX_MODELS_POST } from "./sixModels";
 
@@ -48,7 +48,7 @@ export const SOCIALS = {
   twitter: "https://x.com/awdahir",
   patreon: "https://patreon.com/awdahir",
   payhip: "https://payhip.com/awdahir",
-  email: "hello@awdahir.com",
+  email: "awdahir@immigranteconomist.com",
 };
 
 export const POSTS: Post[] = [

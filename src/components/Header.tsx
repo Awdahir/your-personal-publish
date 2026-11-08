@@ -55,9 +55,9 @@ export function Header() {
             go("home");
           }}
           className="font-serif text-2xl tracking-tight md:text-[1.7rem]"
-          aria-label="Awdahir home"
+          aria-label="The Immigrant Economist — home"
         >
-          Awdahir<span className="text-chart">.</span>
+          A. Awdahir<span className="text-chart">.</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

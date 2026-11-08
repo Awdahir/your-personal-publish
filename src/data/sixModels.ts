@@ -1,8 +1,8 @@
-import asymmetricBetsImage from "@/assets/asymmetric-bets.png.asset.json";
-import decisionTreeImage from "@/assets/immigrant-decision-tree.png.asset.json";
-import economicNumbersImage from "@/assets/immigrant-economic-numbers.png.asset.json";
-import runwayImage from "@/assets/margin-of-safety-runway.png.asset.json";
-import sixModelsImage from "@/assets/six-mental-models-overview.png.asset.json";
+import asymmetricBetsImage from "@/assets/asymmetric-bets.png";
+import decisionTreeImage from "@/assets/immigrant-decision-tree.png";
+import economicNumbersImage from "@/assets/immigrant-economic-numbers.png";
+import runwayImage from "@/assets/margin-of-safety-runway.png";
+import sixModelsImage from "@/assets/six-mental-models-overview.png";
 import type { Post } from "./content";
 
 export const SIX_MODELS_POST: Post = {
@@ -27,7 +27,7 @@ export const SIX_MODELS_POST: Post = {
       ],
       "images": [
         {
-          "url": sixModelsImage.url,
+          "url": sixModelsImage,
           "alt": "Six mental models for money decisions in a new country: second-order thinking, inversion, opportunity cost, margin of safety, asymmetric bets, and map versus territory.",
           "afterParagraph": 6
         }
@@ -74,7 +74,7 @@ export const SIX_MODELS_POST: Post = {
       ],
       "images": [
         {
-          "url": economicNumbersImage.url,
+          "url": economicNumbersImage,
           "alt": "Chart titled Immigrants and the Numbers (US), showing selected statistics about entrepreneurship, emergency savings, population share, and remittances.",
           "afterParagraph": 6
         }
@@ -94,7 +94,7 @@ export const SIX_MODELS_POST: Post = {
       ],
       "images": [
         {
-          "url": runwayImage.url,
+          "url": runwayImage,
           "alt": "The Margin of Safety Runway chart, comparing zero, one, three, six, and twelve months of essential expenses covered with zero income.",
           "afterParagraph": 6
         }
@@ -113,7 +113,7 @@ export const SIX_MODELS_POST: Post = {
       ],
       "images": [
         {
-          "url": asymmetricBetsImage.url,
+          "url": asymmetricBetsImage,
           "alt": "Asymmetric Bets diagram showing a small, capped risk zone and a large, open-ended reward zone, with examples including a night course, side business, and index funds.",
           "afterParagraph": 6
         }
@@ -143,7 +143,7 @@ export const SIX_MODELS_POST: Post = {
       ],
       "images": [
         {
-          "url": decisionTreeImage.url,
+          "url": decisionTreeImage,
           "alt": "The Immigrant Decision Tree flowchart: decide fast and learn cheap when a decision is reversible; otherwise check whether the downside is survivable and whether the upside is much bigger than the downside.",
           "afterParagraph": 7
         }

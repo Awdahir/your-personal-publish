@@ -37,12 +37,15 @@ export function Post({ slug, onNavigate }: PostProps) {
           <p className="mt-6 font-serif text-xl italic leading-relaxed text-ink/60">
             {post.excerpt}
           </p>
+          <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.2em] text-ink/55">
+            By <span className="text-ink">Abdizalaam Awdahir</span> · The Immigrant Economist
+          </p>
         </Reveal>
       </article>
 
       <Reveal delay={150}>
         <div className="mx-auto mt-12 max-w-[62rem] px-6">
-          <PostArt art={post.art} className="aspect-[2/1] border border-ink/20" />
+          <PostArt art={post.art} slug={post.slug} className="aspect-[2/1] border border-ink/20" />
         </div>
       </Reveal>
 

@@ -4,7 +4,7 @@ import { Resources } from "@/pages/Resources";
 export const Route = createFileRoute("/resources")({
   head: () => ({
     meta: [
-      { title: "Resources — Awdahir" },
+      { title: "Resources — The Immigrant Economist" },
       {
         name: "description",
         content: "Free tools and resources to make your money work — budgeting, saving and investing.",

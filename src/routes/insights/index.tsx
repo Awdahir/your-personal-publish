@@ -5,7 +5,7 @@ import { useSiteNavigate } from "@/lib/nav";
 export const Route = createFileRoute("/insights/")({
   head: () => ({
     meta: [
-      { title: "Insights — Awdahir" },
+      { title: "Insights — The Immigrant Economist" },
       {
         name: "description",
         content: "Short notes and sharp insights on money, saving and investing.",

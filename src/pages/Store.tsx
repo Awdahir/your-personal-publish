@@ -110,7 +110,7 @@ export function Store({ onNavigate }: { onNavigate: (page: Page, slug?: string) 
             <Reveal key={post.slug} delay={i * 80}>
               <article className="flex flex-col items-center text-center">
                 <button onClick={() => onNavigate("post", post.slug)} className="block w-full" aria-label={post.title}>
-                  <PostArt art={post.art} className="aspect-[16/9] w-full" />
+                  <PostArt art={post.art} slug={post.slug} className="aspect-[16/9] w-full" />
                 </button>
                 <p className="mt-6 text-sm text-ink/55">{post.date}</p>
                 <h3 className="mt-4 font-serif text-2xl leading-snug tracking-tight">

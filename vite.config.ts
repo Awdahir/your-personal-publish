@@ -11,5 +11,15 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Prerender every route (crawls links from /) so each page — including every
+    // essay and insight — ships as static HTML with its own meta tags.
+    prerender: { enabled: true, crawlLinks: true, failOnError: false, concurrency: 1 },
+  },
+  vite: {
+    build: {
+      // Nitro copies public/ into .output/public itself; letting Vite also copy
+      // (and empty) that directory races Nitro's copy and corrupts the build.
+      copyPublicDir: false,
+    },
   },
 });

@@ -30,16 +30,17 @@ export function Home({ onNavigate }: HomeProps) {
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-8 font-serif text-[clamp(2.9rem,7vw,5.5rem)] leading-[1.02] tracking-[-0.02em]">
-              Personal finance,
+              Immigrant money,
               <br />
               <em>without</em> the jargon.
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 max-w-md text-lg leading-relaxed text-ink/70">
-              I'm Awdahir. I write about budgeting, debt, saving and investing
-              in plain language — so you can keep more of what you earn and
-              build a life you're proud of.
+              I'm Abdizalaam Awdahir — the Immigrant Economist. I write about
+              budgeting, debt, saving and investing in plain language, for
+              people building wealth in a new country — so you can keep more
+              of what you earn and build a life you're proud of.
             </p>
           </Reveal>
           <Reveal delay={360}>
@@ -71,7 +72,7 @@ export function Home({ onNavigate }: HomeProps) {
             className="group block w-full text-left"
           >
             <div className="border border-ink/20 bg-paper2">
-              <PostArt art={featured.art} className="aspect-[4/3] border-b border-ink/20" />
+              <PostArt art={featured.art} slug={featured.slug} className="aspect-[4/3] border-b border-ink/20" />
               <div className="p-6 md:p-8">
                 <div className="flex items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-ink/55">
                   <span className="rounded-full bg-chart px-2.5 py-0.5 text-ink">Featured</span>
@@ -277,8 +278,8 @@ export function Home({ onNavigate }: HomeProps) {
           </Reveal>
           <Reveal delay={120}>
             <p className="max-w-xl font-serif text-2xl leading-snug tracking-tight md:text-[1.8rem]">
-              “I started Awdahir because the best money advice I ever got fit on
-              an index card. Everything here aims to be <em>that</em> useful.”
+              “I started The Immigrant Economist because the best money advice
+              I ever got fit on an index card. Everything here aims to be <em>that</em> useful.”
             </p>
           </Reveal>
           <Reveal delay={240}>

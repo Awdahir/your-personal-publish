@@ -1,11 +1,33 @@
+import { useState } from "react";
+
 interface PostArtProps {
   art: "chart" | "bars" | "coin" | "steps" | "wave" | "shield" | "grid";
   className?: string;
+  /** When provided, shows a data-grounded chart image from /post-art/{slug}.png,
+   *  falling back to the generative SVG if the image is missing. */
+  slug?: string;
 }
 
-/** Code-drawn editorial artwork for article cards, in the site palette. */
-export function PostArt({ art, className = "" }: PostArtProps) {
+/** Editorial artwork for article cards — official-data charts when available,
+ *  otherwise code-drawn motifs in the site palette. */
+export function PostArt({ art, className = "", slug }: PostArtProps) {
+  const [imgFailed, setImgFailed] = useState(false);
   const common = "h-full w-full";
+
+  if (slug && !imgFailed) {
+    return (
+      <div className={`overflow-hidden bg-paper2 ${className}`}>
+        <img
+          src={`/post-art/${slug}.png`}
+          alt="Chart based on official statistics, relevant to this article"
+          loading="lazy"
+          className={`${common} object-cover`}
+          onError={() => setImgFailed(true)}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={`overflow-hidden bg-paper2 ${className}`}>
       {art === "chart" && (

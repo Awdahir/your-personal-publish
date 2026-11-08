@@ -44,6 +44,7 @@ export function Insights({ onNavigate }: InsightsProps) {
           >
             <PostArt
               art={lead.art}
+              slug={lead.slug}
               className="aspect-[4/3] border-b border-ink/20 md:aspect-auto md:border-b-0 md:border-r"
             />
             <div className="flex flex-col justify-center bg-paper2 p-8 md:p-12">
