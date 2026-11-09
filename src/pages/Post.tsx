@@ -3,6 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { PostArt } from "@/components/PostArt";
 import { ArticleBody } from "@/components/ArticleBody";
 import { POSTS, SOCIALS } from "@/data/content";
+import { CHART_CAPTIONS } from "@/data/chartCaptions";
 import type { Page } from "@/types/navigation";
 
 interface PostProps {
@@ -46,6 +47,11 @@ export function Post({ slug, onNavigate }: PostProps) {
       <Reveal delay={150}>
         <div className="mx-auto mt-12 max-w-[62rem] px-6">
           <PostArt art={post.art} slug={post.slug} className="aspect-[2/1] border border-ink/20" />
+          {CHART_CAPTIONS[post.slug] && (
+            <p className="mt-3 max-w-[62rem] font-mono text-[0.66rem] uppercase leading-relaxed tracking-[0.12em] text-ink/50">
+              {CHART_CAPTIONS[post.slug]}
+            </p>
+          )}
         </div>
       </Reveal>
 

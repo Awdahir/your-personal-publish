@@ -4,6 +4,7 @@ import { PostArt } from "@/components/PostArt";
 import { ArticleBody } from "@/components/ArticleBody";
 import { INSIGHTS } from "@/data/insights";
 import { SOCIALS } from "@/data/content";
+import { CHART_CAPTIONS } from "@/data/chartCaptions";
 import type { Page } from "@/types/navigation";
 
 interface InsightPostProps {
@@ -49,6 +50,11 @@ export function InsightPost({ slug, onNavigate }: InsightPostProps) {
       <Reveal delay={150}>
         <div className="mx-auto mt-12 max-w-[62rem] px-6">
           <PostArt art={note.art} slug={note.slug} className="aspect-[2/1] border border-ink/20" />
+          {CHART_CAPTIONS[note.slug] && (
+            <p className="mt-3 max-w-[62rem] font-mono text-[0.66rem] uppercase leading-relaxed tracking-[0.12em] text-ink/50">
+              {CHART_CAPTIONS[note.slug]}
+            </p>
+          )}
         </div>
       </Reveal>
 

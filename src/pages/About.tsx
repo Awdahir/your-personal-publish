@@ -22,30 +22,49 @@ export function About({ onNavigate }: { onNavigate: (page: Page) => void }) {
           <Reveal delay={150}>
             <div className="mt-10 max-w-xl space-y-6 text-[1.05rem] leading-[1.85] text-ink/85">
               <p>
-                I didn't grow up around people who talked about money well. It
-                was either a source of stress or a subject wrapped in
-                impenetrable jargon — as if wanting to understand your own
-                finances required a finance degree first.
+                I was born in Somalia and grew up in Kenya, where there was
+                never enough money and every shilling already had a job.
+                Nobody called that budgeting — it was just how we got by. It
+                taught me how to live with absolute scarcity, and it is an
+                experience I am genuinely grateful for.
               </p>
               <p>
-                Everything changed when I realized the fundamentals of personal
-                finance are genuinely simple: spend less than you earn, avoid
-                expensive debt, save the difference, invest it patiently, and
-                protect yourself from disaster. Simple — but not easy, because
-                nobody teaches the <em>habits</em> that make it stick.
+                When I came to Canada, I studied economics — a BSc and then
+                an MA — and assumed that meant I understood money. Then I
+                started managing my own money here and realized how much I
+                still didn't know. Nobody around me had grown up talking about
+                RRSPs, TFSAs, or index funds, and the people who had seemed to
+                assume everyone else already understood them.
+              </p>
+              <p>
+                What I eventually learned is that the basics are not
+                complicated: spend less than you earn, stay out of expensive
+                debt, save the difference, invest it and leave it alone, and
+                get insurance for the things that could wreck you. What is
+                hard is sticking with it — and that gap between knowing and
+                doing is what most of my writing is about.
               </p>
               <p>
                 That's what The Immigrant Economist is for. I write weekly
-                essays, build
-                practical tools, and publish digital books that turn money
-                fundamentals into systems you can actually run. No jargon, no
-                get-rich-quick, no shame. Just clear thinking about the money
-                you already have.
+                essays, build practical tools, and publish digital books that
+                turn money fundamentals into systems you can actually run.
+                Just clear thinking about the money you already have and worked
+                hard for!
               </p>
               <p>
-                When I'm not writing, I'm reading behavioral economics,
-                refining my own spreadsheets, and answering reader questions —
-                the best part of this whole project.
+                I'm a father of three, so a lot of this is about the future
+                I'm building for them. I read about 25 books a year — mostly
+                investing and behavioral economics — I've managed my own
+                portfolio since 2017, and I'm always fiddling with my own
+                spreadsheets. My favorite part of this work is answering
+                reader questions. If you have one,{" "}
+                <button
+                  onClick={() => onNavigate("contact")}
+                  className="link-underline font-medium text-ink"
+                >
+                  send it over
+                </button>
+                .
               </p>
             </div>
           </Reveal>
@@ -74,8 +93,10 @@ export function About({ onNavigate }: { onNavigate: (page: Page) => void }) {
             <dl className="mt-8 divide-y divide-ink/15 border-y border-ink/15">
               {[
                 ["Writing about", "Budgeting, debt, saving, investing, mindset"],
-                ["Publishing", "Weekly essays + The Awdahir Letter"],
-                ["Based on", "Real systems, tested on my own money first"],
+                ["Credentials", "BSc + MA, Economics"],
+                ["Journey", "Born in Somalia · raised in Kenya · Canada"],
+                ["Investing since", "2017 — my own money first"],
+                ["Reading", "About 25 books a year"],
                 ["Elsewhere", "Substack · X · Patreon · Payhip"],
               ].map(([k, v]) => (
                 <div key={k} className="grid grid-cols-[8rem_1fr] gap-4 py-4 text-sm">
